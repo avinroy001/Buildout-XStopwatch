@@ -26,7 +26,7 @@ function App() {
     timer=setInterval(()=>{
       setSec(sec+1);
 
-      if(sec==59){
+      if(sec==60){
         setMin(min+1);
         setSec(0);
       }
