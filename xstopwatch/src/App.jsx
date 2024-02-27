@@ -18,9 +18,9 @@ function App() {
     }
   }
   console.log(start)
-  var timer;
+  // var timer;
   useEffect(()=>{
-    // var timer;
+    var timer;
     if(start==true){
       setButtonText('Stop');
     timer=setInterval(()=>{
@@ -42,7 +42,7 @@ function App() {
 
   const resett=()=>{
     setStart(false);
-    clearInterval(timer);
+    // clearInterval(timer);
     setSec(0);
     setMin(0);
   }
