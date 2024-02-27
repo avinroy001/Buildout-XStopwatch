@@ -38,7 +38,7 @@ function App() {
       // setMin(0);
     }
     return ()=>clearInterval(timer);
-  })
+  },[min, sec, start])
 
   const resett=()=>{
     setStart(false);
