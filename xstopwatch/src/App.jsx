@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <h1>Stopwatch</h1>
-      <p>{formatTime(sec)}</p>
+      <p>Time: {formatTime(sec)}</p>
       <br/>
       <button onClick={startStop}>{start ? "Stop" : "Start"}</button> 
       <button onClick={resett}>Reset</button>  
