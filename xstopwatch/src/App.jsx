@@ -8,7 +8,7 @@ function App() {
   const [start,setStart]=useState(false);
   // const [reset,setReset]=useState(false);
   // const [stop,setStop]=useState(true);
-  const [buttonText,setButtonText]=useState('Start')
+  // const [buttonText,setButtonText]=useState('Start')
 
   const startStop=()=>{
     if(start==true){
@@ -17,12 +17,11 @@ function App() {
       setStart(true);
     }
   }
-  console.log(start)
+  // console.log(start)
   // var timer;
   useEffect(()=>{
     var timer;
     if(start==true){
-      setButtonText('Stop');
     timer=setInterval(()=>{
       setSec(sec+1);
 
@@ -33,16 +32,12 @@ function App() {
     },1000)
     }else{
       ()=>clearInterval(timer);
-      setButtonText('Start');
-      // setSec(0);
-      // setMin(0);
     }
     return ()=>clearInterval(timer);
   },[min, sec, start])
 
   const resett=()=>{
     setStart(false);
-    // clearInterval(timer);
     setSec(0);
     setMin(0);
   }
@@ -52,7 +47,7 @@ function App() {
       <h1>Stopwatch</h1>
       <h3>Time: {min}:{sec<10?"0"+sec : sec}</h3>
       <br/>
-      <button onClick={()=>{startStop()}}>{buttonText}</button> 
+      <button onClick={()=>{startStop()}}>{start ? "Stop" : "Start"}</button> 
       <button onClick={()=>{resett()}}>Reset</button>  
     </>
   )
