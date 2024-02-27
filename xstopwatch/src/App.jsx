@@ -17,7 +17,7 @@ function App() {
       setStart(true);
     }
   }
-  
+  console.log(start)
   var timer;
   useEffect(()=>{
     // var timer;
@@ -26,7 +26,7 @@ function App() {
     timer=setInterval(()=>{
       setSec(sec+1);
 
-      if(sec==60){
+      if(sec==59){
         setMin(min+1);
         setSec(0);
       }
